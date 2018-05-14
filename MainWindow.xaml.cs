@@ -208,6 +208,7 @@ namespace DICUI
                     Process process = new Process();
                     process.StartInfo.FileName = "Release_ANSI\\DiscImageCreator.exe";
                     process.StartInfo.Arguments = VAR_Type + " " + VAR_DriveLetter + " " + VAR_OutputDirectory + "\\" + VAR_OutputFilename + " " + VAR_DriveSpeed + " " + VAR_Switches;
+                    LBL_Status.Content = "Dumping Now - Please Wait";
                     Console.WriteLine(process.StartInfo.Arguments);
                     process.Start();
                     process.WaitForExit();
